@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Admin</title>
+    <script type="module" src="src/main.js"></script>
+</head>
+
+<body class="bg-yellow-50 p-6 pt-20">
+    <header class="max-w-6xl mx-auto mb-6">
+
+        <nav class="fixed top-0 left-0 w-full flex items-center p-4 bg-yellow-200 shadow z-50">
+            <div class="max-w-6xl mx-auto w-full flex justify-end items-center text-lg font-semibold px-4">
+                <a href="index.html" class="text-yellow-900 hover:text-red-700 px-3">Home</a>
+                <a href="admin.html" class="text-yellow-900 hover:text-red-700 px-3">Admin</a>
+            </div>
+        </nav>
+
+        <h1 class="text-4xl font-bold mb-4 text-yellow-900">Admin Panel - Manage Recipes</h1>
+
+    </header>
+
+    <main class="max-w-6xl mx-auto grid gap-8 grid-cols-1 md:grid-cols-2">
+
+        <section>
+            <h2 class="text-2xl font-semibold mb-4 text-yellow-900">Existing Recipes</h2>
+            <ul>
+                <li class="mb-3">
+                    <span class="font-semibold text-yellow-900 text-xl">Chocolate Cake</span>
+                    <img src="chocolate-cake.avif" alt="Chocolate cake image"
+                        class="w-full rounded mb-3 object-cover h-40" />
+                    <div class="flex gap-6">
+                        <button type="button"
+                            class="bg-yellow-200 text-yellow-900 hover:text-red-700 font-semibold p-4 rounded shadow hover:shadow-md transition">Edit</button>
+                        <button type="button"
+                            class="bg-yellow-200 text-yellow-900 hover:text-red-700 font-semibold p-4 rounded shadow hover:shadow-md transition">Delete</button>
+                    </div>
+                </li>
+                <li class="mb-4">
+                    <span class="font-semibold text-yellow-900 text-xl">Chocolate Cake</span>
+                    <img src="chocolate-cake.avif" alt="Chocolate cake image"
+                        class="w-full rounded mb-3 object-cover h-40" />
+                    <div class="flex gap-6">
+                        <button type="button"
+                            class="bg-yellow-200 text-yellow-900 hover:text-red-700 font-semibold p-4 rounded shadow hover:shadow-md transition">Edit</button>
+                        <button type="button"
+                            class="bg-yellow-200 text-yellow-900 hover:text-red-700 font-semibold p-4 rounded shadow hover:shadow-md transition">Delete</button>
+                    </div>
+                </li>
+
+
+            </ul>
+        </section>
+
+        <section>
+            <h2 class="text-2xl font-semibold mb-4 text-yellow-900">Create New Recipe</h2>
+            <form class="space-y-4">
+                <div>
+                    <label for="title" class="block mb-1 text-yellow-900">Title *</label>
+                    <input type="text" id="title" name="title" required minlength="3" placeholder="Recipe title" />
+                </div>
+
+                <div>
+                    <label for="image" class="block mb-1 text-yellow-900">Image Upload</label>
+                    <input type="file" id="image" name="image" accept="image/*" />
+                </div>
+
+                <div>
+                    <label for="author" class="block mb-1 text-yellow-900">Author *</label>
+                    <input type="text" id="author" name="author" required minlength="3" placeholder="Author name" />
+                </div>
+
+                <div>
+                    <label for="description" class="block mb-1 text-yellow-900">Brief Description *</label>
+                    <textarea id="description" name="description" required minlength="5" rows="3"
+                        placeholder="Brief description of the recipe"></textarea>
+                </div>
+
+                <div class="mb-4">
+                    <label for="ingredients" class="block mb-1 text-yellow-900">Ingredients List *</label>
+                    <textarea id="ingredients" name="ingredients" required minlength="10" rows="4"
+                        placeholder="List ingredients, separated by commas or new lines"></textarea>
+                </div>
+
+                <button type="submit"
+                    class="bg-yellow-200 text-yellow-900 hover:text-red-700 font-semibold p-4 rounded shadow hover:shadow-md transition">
+                    Submit
+                </button>
+            </form>
+        </section>
+
+    </main>
+</body>
+
+</html>
