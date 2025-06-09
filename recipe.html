@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Details</title>
+    <script type="module" src="src/main.js"></script>
+</head>
+
+<body class="bg-yellow-50 p-6 pt-20">
+    <header class="max-w-6xl mx-auto mb-6">
+
+        <nav class="fixed top-0 left-0 w-full flex items-center p-4 bg-yellow-200 shadow z-50">
+
+            <button id="burger-btn"
+                class="md:hidden flex flex-col justify-center items-center gap-1.5 p-2 focus:outline-none"
+                aria-label="Toggle menu" aria-expanded="false">
+                <span class="block w-6 h-0.5 bg-yellow-900"></span>
+                <span class="block w-6 h-0.5 bg-yellow-900"></span>
+                <span class="block w-6 h-0.5 bg-yellow-900"></span>
+            </button>
+
+            <div id="nav-links"
+                class="hidden md:flex max-w-6xl mx-auto w-full justify-center items-center text-lg font-semibold px-4">
+                <a href="index.html" class="text-yellow-900 hover:text-red-700 px-3">Home</a>
+                <a href="admin.html" class="text-yellow-900 hover:text-red-700 px-3">Admin</a>
+            </div>
+
+
+        </nav>
+
+    </header>
+
+    <main class=" rounded-lg p-6 text-yellow-900">
+
+        <div class="block bg-white rounded-lg shadow p-4 text-yellow-900">
+            <img src="chocolate-cake.avif" alt="Chocolate cake image" class="w-full rounded mb-3 object-cover h-40" />
+            <h2 class="text-xl font-semibold mb-1">Chocolate Cake</h2>
+            <p class="text-red-700 text-sm">By Ola Nordmann</p>
+            <p class="text-red-700 text-xs mb-4">01.06.2025</p>
+            <p class="mb-4">This rich and moist chocolate cake is perfect for celebrations or an indulgent treat. It's
+                easy to make and incredibly delicious!</p>
+
+            <h2 class="text-xl font-semibold mb-2">Ingredients:</h2>
+            <ul class="list-disc pl-5 mb-6">
+                <li>200g all-purpose flour</li>
+                <li>200g sugar</li>
+                <li>100g cocoa powder</li>
+                <li>1 tsp baking powder</li>
+                <li>2 eggs</li>
+                <li>1 cup milk</li>
+                <li>1/2 cup vegetable oil</li>
+                <li>1 tsp vanilla extract</li>
+            </ul>
+
+            <h2 class="text-xl font-semibold mb-3">Leave a comment</h2>
+            <form class="space-y-4">
+                <div>
+                    <label for="name" class="block font-medium mb-4">Name</label>
+                    <input type="text" id="name" name="name" required minlength="3"
+                        class="w-full px-4 py-2 border rounded shadow-sm focus:outline-none focus:ring-2 placeholder:text-yellow-900 text-yellow-900 mb-4"
+                        placeholder="Your name" />
+                </div>
+
+                <div>
+                    <label for="message" class="block font-medium">Message</label>
+                    <textarea id="message" name="message" required minlength="5" rows="4"
+                        class="w-full px-4 py-2 border rounded shadow-sm focus:outline-none focus:ring-2 placeholder:text-yellow-900 text-yellow-900"
+                        placeholder="Write your comment here..."></textarea>
+                </div>
+
+                <button type="submit"
+                    class="bg-yellow-200 text-yellow-900 hover:text-red-700 font-semibold p-4 rounded shadow hover:shadow-md transition">
+                    Submit
+                </button>
+            </form>
+        </div>
+    </main>
+
+</body>
+
+</html>
